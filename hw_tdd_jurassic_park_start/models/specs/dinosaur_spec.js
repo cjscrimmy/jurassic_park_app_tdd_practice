@@ -14,7 +14,10 @@ describe('Dinosaur', function() {
     assert.strictEqual(actual, 't-rex');
   });
 
-  it('should have a diet');
+  it('should have a diet', function(){
+    const actual = dinosaur.diet;
+    assert.strictEqual(actual, 'carnivore');
+  });
 
   it('should have an average number of visitors it attracts per day');
 

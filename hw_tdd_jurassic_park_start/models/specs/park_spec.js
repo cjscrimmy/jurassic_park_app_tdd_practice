@@ -30,7 +30,11 @@ describe('Park', function() {
 
   });
 
-  it('should be able to add a dinosaur to its collection');
+  it('should be able to add a dinosaur to its collection', function () {
+    park.addDinosaur(dinosaur1);
+    const actual = park.collectionOfDinosaurs.length;
+    assert.strictEqual(actual, 1);
+  });
 
   it('should be able to remove a dinosaur from its collection');
 

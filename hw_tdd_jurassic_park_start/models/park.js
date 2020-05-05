@@ -24,4 +24,14 @@ Park.prototype.findDinosOfASpecies = function(species) {
     return results;
 }
 
+Park.prototype.totalNumOfVisitorsPerDay = function () {
+    let totalDailyVisitors = 0;
+
+    for(const dino of this.collectionOfDinosaurs){
+        totalDailyVisitors += dino.guestsAttractedPerDay;
+    };
+
+    return totalDailyVisitors;
+};
+
 module.exports = Park;
